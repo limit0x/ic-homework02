@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "multi_cycle_wallet": {
+      "main": "src/multi_cycle_wallet/main.mo",
+      "type": "motoko"
+    },
+    "multi_cycle_wallet_assets": {
+      "dependencies": [
+        "multi_cycle_wallet"
+      ],
+      "frontend": {
+        "entrypoint": "src/multi_cycle_wallet_assets/src/index.html"
+      },
+      "source": [
+        "src/multi_cycle_wallet_assets/assets",
+        "dist/multi_cycle_wallet_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
